@@ -33,7 +33,7 @@ const Entrega: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch('/api/submit-delivery', {
+      const response = await fetch('/.netlify/functions/submit-delivery', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
