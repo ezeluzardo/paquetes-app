@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# 📦 Control de Paquetes FLEX y GestionPost
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Desarrollado por [Ezequiel Luzardo](https://github.com/ezeluzardo)
 
-## Available Scripts
+## 🎯 Acerca del Proyecto
 
-In the project directory, you can run:
+Este sistema nace de la necesidad de optimizar y digitalizar el proceso de control y registro de entregas en MACROTEC. Como desarrollador y líder del proyecto, he diseñado una solución que simplifica la gestión diaria de paquetes FLEX y GestionPost, transformando un proceso manual en una experiencia digital fluida y eficiente.
 
-### `npm start`
+## ✨ Lo Que Hace Especial a Este Sistema
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 🔄 **Control en Tiempo Real**: Seguimiento instantáneo de paquetes FLEX y GestionPost
+- 📱 **Diseño Intuitivo**: Interfaz moderna y fácil de usar en cualquier dispositivo
+- ✍️ **Firma Digital**: Captura de firmas de cadetes directamente en la aplicación
+- 📊 **Integración con Google Sheets**: Registro automático y organizado de todas las entregas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 💡 La Solución
 
-### `npm test`
+Como responsable de la gestión de paquetes en MACROTEC, entiendo la importancia de tener un sistema confiable y fácil de usar. Esta aplicación resuelve varios desafíos clave:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Eliminación de Errores Manuales**: Conteo automático y preciso de paquetes
+- **Registro Digital**: Adiós al papeleo, todo queda guardado en la nube
+- **Accesibilidad**: Disponible desde cualquier dispositivo con conexión a internet
+- **Trazabilidad**: Seguimiento detallado de cada entrega realizada
 
-### `npm run build`
+## 👨‍💻 Sobre Mí
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Soy Ezequiel Luzardo, desarrollador y líder de proyectos tecnológicos en MACROTEC. Me apasiona crear soluciones que mejoren los procesos diarios y hagan la vida más fácil a nuestros equipos. Este proyecto es un ejemplo de cómo la tecnología puede transformar tareas cotidianas en procesos eficientes y confiables.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📫 Contacto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+¿Interesado en saber más sobre este u otros proyectos?
 
-### `npm run eject`
+- GitHub: [@ezeluzardo](https://github.com/ezeluzardo)
+- LinkedIn: [Ezequiel Luzardo](https://linkedin.com/in/ezequiel-luzardo)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+© 2025 Ezequiel Luzardo - MACROTEC
