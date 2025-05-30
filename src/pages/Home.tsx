@@ -1,68 +1,63 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import Counter from '../components/Counter';
-import { PackageCount } from '../types';
+import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
-  const [packageCounts, setPackageCounts] = useState<PackageCount>({
-    flex: 0,
-    gestionPost: 0,
-  });
 
-  const handleIncrement = (type: keyof PackageCount) => {
-    setPackageCounts(prev => ({
-      ...prev,
-      [type]: prev[type] + 1,
-    }));
-  };
-
-  const handleDecrement = (type: keyof PackageCount) => {
-    setPackageCounts(prev => ({
-      ...prev,
-      [type]: Math.max(0, prev[type] - 1),
-    }));
-  };
-
-  const total = packageCounts.flex + packageCounts.gestionPost;
-
-  const handleConfirm = () => {
-    navigate('/entrega', { state: packageCounts });
+  const handleCounterSubmit = (flex: number, gestionPost: number) => {
+    navigate('/entrega', { state: { flex, gestionPost } });
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md mx-auto">
-        <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
-          Control de Paquetes
-        </h1>
-        <div className="space-y-6">
-          <Counter
-            label="Paquetes FLEX"
-            value={packageCounts.flex}
-            onIncrement={() => handleIncrement('flex')}
-            onDecrement={() => handleDecrement('flex')}
-          />
-          <Counter
-            label="Paquetes GestionPost"
-            value={packageCounts.gestionPost}
-            onIncrement={() => handleIncrement('gestionPost')}
-            onDecrement={() => handleDecrement('gestionPost')}
-          />
-          <div className="bg-white p-4 rounded-lg shadow-md text-center">
-            <h3 className="text-xl font-semibold">Total de Paquetes</h3>
-            <p className="text-3xl font-bold text-blue-600">{total}</p>
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-extrabold text-secondary-900 mb-4">
+            Sistema de Gestión de Paquetes
+          </h1>
+          <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
+            Registre y controle la entrega de paquetes FLEX y GestionPost de manera eficiente
+          </p>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-soft p-8">
+          <div className="grid grid-cols-1 gap-8">
+            <div>
+              <h2 className="text-2xl font-bold text-secondary-900 mb-6">
+                Contador de Paquetes
+              </h2>
+              <div className="bg-secondary-50 rounded-xl p-6">
+                <Counter onSubmit={handleCounterSubmit} />
+              </div>
+            </div>
+
+            <div className="border-t border-secondary-200 pt-8">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-4">
+                Instrucciones
+              </h3>
+              <ul className="space-y-4 text-secondary-600">
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-primary-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>Utilice los botones <span className="font-medium">+</span> y <span className="font-medium">-</span> para ajustar la cantidad de paquetes de cada tipo</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-primary-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>Una vez ingresadas las cantidades correctas, haga clic en <span className="font-medium">Continuar</span></span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="h-6 w-6 text-primary-500 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span>Complete el formulario de entrega con los datos del cadete y su firma</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <button
-            onClick={handleConfirm}
-            disabled={total === 0}
-            className={`w-full py-3 px-4 rounded-md text-white font-semibold text-lg
-              ${total === 0 
-                ? 'bg-gray-400 cursor-not-allowed' 
-                : 'bg-blue-600 hover:bg-blue-700'}`}
-          >
-            Confirmar Entrega de Paquetes
-          </button>
         </div>
       </div>
     </div>
